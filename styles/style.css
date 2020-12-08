@@ -1,0 +1,193 @@
+/*DEVELOPER: Kelly Wu, IS117-001, Fall, 2020 */
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	background-color: white;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    width: 99%;                     
+    max-width: 960px;
+    margin: 0 auto;
+    border: 3px solid #931420;
+    background-color: #fffded;
+}
+a:focus, a:hover {
+	font-style: italic;
+}
+/* the styles for the header */
+header {
+	padding: 1em 0 2em 0;
+	border-bottom: 3px solid #ff6680;
+	background-image: -moz-linear-gradient(
+	    30deg, #fffded 0%, #fffded 30%, pink 50%, #fffded 80%, #fffded 100%);
+	background-image: -webkit-linear-gradient(
+	    30deg, #fffded 0%, #fffded 30%, pink 50%, #fffded 80%, #fffded 100%);
+	
+}
+.dropbtn {
+  background-color: #ffb3bf;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffb3bf;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ffccd5;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+header h3 {
+	font-size: 130%;
+	font-style: italic;
+}
+header img {
+	float: left;
+	padding: 0 1%;            /* 30 / 800 x 100 */
+}
+section {
+	width: 65.625%;                  /* 525 / 800 X 100 */
+	float: right;
+	padding: 0 2.5% 20px 2.5%;       /* 20 / 800 x 100 */
+}
+section h1 {
+	font-size: 150%;
+	padding: .5em 0 .25em 0;
+	margin: 0;
+}
+section h2 {
+	color: #ff6680;
+	font-size: 130%;
+	padding: .5em 0 .25em 0;
+}
+section p {
+	padding-bottom: .5em;
+}
+section blockquote {
+	padding: 0 2em;
+	font-style: italic;
+}
+section ul {
+	padding: 0 0 .25em 1.25em;
+	list-style-type: circle;
+}
+section li {
+	padding-bottom: .35em;
+}
+
+/* the styles for the article */
+article {
+	padding: .5em 0;
+	border-top: 2px solid #800000;
+	border-bottom: 2px solid #800000;
+}
+article h2 {
+	padding-top: 0;
+}
+article h3 {
+	font-size: 105%;
+	padding-bottom: .25em;
+}
+article img {
+	float: right;
+	max-width: 40%;
+	min-width: 150px;
+	margin: .5em 0 1em 1em;
+	border: 1px solid black;
+}
+
+/* the styles for the aside */
+aside {
+	width: 26.875%;                     /* 215 / 800 x 100 */
+	float: right;
+	padding: 0 0 20px 2.5%;             /* 20 / 800 x 100 */
+}
+aside h2 {
+	color: #ffe6ea;
+	font-size: 130%;
+	padding: .5em 0 .25em 0;
+}
+
+aside h3 {
+	font-size: 105%;
+	padding-bottom: .25em;
+}
+aside img {
+	padding-bottom: 1em;
+}
+
+/* the styles for the footer */
+footer {
+	background-color: #ff6680;
+	clear: both;
+
+}
+footer p {
+	text-align: center;
+	color: white;
+	padding: 1em 0;
+}
+#mobile_menu {
+	display: none;
+}
+
+/* tablet portrait to standard 960 */
+@media only screen and (max-width: 959px) {
+	section h1 { font-size: 135%; }
+	section h2, aside h2 { font-size: 120%; }
+}
+
+/* mobile landscape to tablet portrait */
+@media only screen and (max-width: 767px) {
+	header img { float: none; }
+	header { text-align: center; }
+	section {
+		float: none;
+		width: 95%;                     /* 100 - (2 x 2.5) for padding */
+	}
+	aside {
+		float: none;
+		padding-right: 2.5%;           /* 20 / 800 x 100 */
+		width: 95%;                    /* 100 - (2 x 2.5) for padding */
+	}
+	article img { max-width: 30%; }
+	
+	#mobile_menu {
+		display: block;
+	}
+	.slicknav_menu {
+		background-color: #ffe6ea !important;
+	}
+}
+@media only screen and (max-width: 479px) {
+	body { font-size: 90%; }
+}
